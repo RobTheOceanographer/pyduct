@@ -22,3 +22,5 @@ Fill me in please! Don't forget code examples:
     2
 
 
+
+Logo art from “Vecteezy.com”
