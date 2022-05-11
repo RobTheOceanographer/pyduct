@@ -62,6 +62,5 @@ sidebars:
 plugins:
     - jekyll-remote-theme
     
-# remote_theme: fastai/nbdev-jekyll-theme
-remote_theme: documentation-theme-jekyll
+remote_theme: fastai/nbdev-jekyll-theme
 baseurl: /pypipe/
