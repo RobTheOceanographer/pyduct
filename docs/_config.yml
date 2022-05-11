@@ -2,7 +2,7 @@ repository: robtheoceanographer/pypipe
 output: web
 topnav_title: pypipe
 site_title: pypipe
-company_name: Robert Johnson and Alexander Kozlov
+company_name: Robert Johnson and Alexander Kozlov and Mohammadreza Khanarmuei
 description: A framework for building and running simple data engineering pipelines in Python.
 # Set to false to disable KaTeX math
 use_math: true
@@ -62,5 +62,6 @@ sidebars:
 plugins:
     - jekyll-remote-theme
     
-remote_theme: fastai/nbdev-jekyll-theme
+# remote_theme: fastai/nbdev-jekyll-theme
+remote_theme: documentation-theme-jekyll
 baseurl: /pypipe/
