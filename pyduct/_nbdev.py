@@ -6,8 +6,8 @@ index = {"TransformationPipe": "00_pipes.ipynb"}
 
 modules = ["pipes.py"]
 
-doc_url = "https://robtheoceanographer.github.io/pypipe/"
+doc_url = "https://robtheoceanographer.github.io/pyduct/"
 
-git_url = "https://github.com/robtheoceanographer/pypipe/tree/master/"
+git_url = "https://github.com/robtheoceanographer/pyduct/tree/master/"
 
 def custom_doc_links(name): return None

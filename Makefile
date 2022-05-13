@@ -2,11 +2,11 @@
 SHELL := /bin/bash
 SRC = $(wildcard nbs/*.ipynb)
 
-all: pypipe docs
+all: pyduct docs
 
-pypipe: $(SRC)
+pyduct: $(SRC)
 	nbdev_build_lib
-	touch pypipe
+	touch pyduct
 
 sync:
 	nbdev_update_lib

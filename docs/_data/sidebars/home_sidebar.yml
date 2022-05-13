@@ -13,6 +13,6 @@ entries:
       title: Transformer pipes
       url: pipes.html
     output: web
-    title: pypipe
+    title: pyduct
   output: web
   title: Sidebar

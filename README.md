@@ -1,37 +1,37 @@
-# PyPipe
+# PyDuct
 > A framework for building and running simple data engineering pipelines in Python.
 
 
 In Data Science or Data Engineering you constantly hear term “data pipeline”. But there are so many meanings to this term and people often are refering to very specific tools or packages depending on their own background/needs. There are pipelines for pretty much everything and in Python alone I can think of [Luigi](https://luigi.readthedocs.io/en/stable/), [Airflow](https://airflow.apache.org/), [scikit-learn pipelines](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html), and [Pandas pipes](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pipe.html) just off the top of my head - [this article](https://towardsdatascience.com/data-pipelines-what-why-and-which-ones-1f674ba49946) does a good job of helping you understand what is out there.
 
-It can be quite confusing especially if you want a simple and agnostic pipeline that you can customize for your specific needs with no bells and whistles or lock-ins to libraries etc. That is where PyPipe comes in. It is for the simple data engineer who just wants to get stuff done in an ordered and repeatable way.
+It can be quite confusing especially if you want a simple and agnostic pipeline that you can customize for your specific needs with no bells and whistles or lock-ins to libraries etc. That is where PyDuct comes in. It is for the simple data engineer who just wants to get stuff done in an ordered and repeatable way.
 
-PyPipe is a simple data pipeline that automates a chain of transformations performed on some data.
+PyDuct is a simple data pipeline that automates a chain of transformations performed on some data.
 
-PyPipe data pipelines are a great way of introducing automation, reproducibility, structure, and flow to your data engineering projects.
+PyDuct data pipelines are a great way of introducing automation, reproducibility, structure, and flow to your data engineering projects.
 
 ---
 
-PyPipe was made by [Robert Johnson](https://www.robtheoceanographer.com/) and [Alexander Kozlov](https://alexkozlov.com/) and [Mohammadreza Khanarmuei](https://www.linkedin.com/in/mohammadreza-khanarmuei-437a3163)
+PyDuct was made by [Robert Johnson](https://www.robtheoceanographer.com/) and [Alexander Kozlov](https://alexkozlov.com/) and [Mohammadreza Khanarmuei](https://www.linkedin.com/in/mohammadreza-khanarmuei-437a3163)
 
 ---
 
 ## What is it?
 
-The PyPipe transformation pipelines use user defined transformation functions linked together into a TransformationPipe. The key feature of PyPipe is that the datasource passed in can be almost anything that you desire  - e.g. a pandas dataframe, a geopandas dataframe, and iris datacube, a numppy array, so long as your transformation steps read and write the same object pypipe will work for you.
+The PyDuct transformation pipelines use user defined transformation functions linked together into a TransformationPipe. The key feature of PyDuct is that the datasource passed in can be almost anything that you desire  - e.g. a pandas dataframe, a geopandas dataframe, and iris datacube, a numppy array, so long as your transformation steps read and write the same object PyDuct will work for you.
 
 ![pypipe arch](nbs/images/pypipe.jpeg)
 
 ## Install
 
-`pip install pypipe`
+`pip install pyduct`
 
 ## How to use
 
 The TransformationPipe class accepts a list of transformation functions,'steps', to be applied sequentially. Each step contains a name and a function, applied to the input DataObject and will return a transformed DataObject. There is also a third argument in a step that is an optional dictionary of parameters to be passed to your step transformation functions.
 
 
-In order to use PyPipe you need two things - a DataObject and a set of transformation steps
+In order to use PyDuct you need two things - a DataObject and a set of transformation steps
 
 ### DataObject
 
@@ -190,7 +190,7 @@ def spatialCrop(gdf: geopandas.GeoDataFrame, **kwargs):
     return limited_gdf
 ```
 
-### Define a PyPipe
+### Define a PyDuct Pipe
 Now that we have a step or function and some data we can now define our transformation pipeline:
 
 ```python
@@ -199,7 +199,7 @@ pipe = TransformationPipe(steps=[
 ])
 ```
 
-### Evaluate your PyPipe
+### Evaluate your PyDuct Pipe
 This where things get interesting... we can now call `evaluate` on our pipe and watch the magic happen:
 
 #### Input data:

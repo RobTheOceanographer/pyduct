@@ -1,6 +1,6 @@
 ---
 
-title: PyPipe
+title: PyDuct
 
 
 keywords: fastai
@@ -32,9 +32,9 @@ nb_path: "nbs/index.ipynb"
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In Data Science or Data Engineering you constantly hear term “data pipeline”. But there are so many meanings to this term and people often are refering to very specific tools or packages depending on their own background/needs. There are pipelines for pretty much everything and in Python alone I can think of <a href="https://luigi.readthedocs.io/en/stable/">Luigi</a>, <a href="https://airflow.apache.org/">Airflow</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html">scikit-learn pipelines</a>, and <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pipe.html">Pandas pipes</a> just off the top of my head - <a href="https://towardsdatascience.com/data-pipelines-what-why-and-which-ones-1f674ba49946">this article</a> does a good job of helping you understand what is out there.</p>
-<p>It can be quite confusing especially if you want a simple and agnostic pipeline that you can customize for your specific needs with no bells and whistles or lock-ins to libraries etc. That is where PyPipe comes in. It is for the simple data engineer who just wants to get stuff done in an ordered and repeatable way.</p>
-<p>PyPipe is a simple data pipeline that automates a chain of transformations performed on some data.</p>
-<p>PyPipe data pipelines are a great way of introducing automation, reproducibility, structure, and flow to your data engineering projects.</p>
+<p>It can be quite confusing especially if you want a simple and agnostic pipeline that you can customize for your specific needs with no bells and whistles or lock-ins to libraries etc. That is where PyDuct comes in. It is for the simple data engineer who just wants to get stuff done in an ordered and repeatable way.</p>
+<p>PyDuct is a simple data pipeline that automates a chain of transformations performed on some data.</p>
+<p>PyDuct data pipelines are a great way of introducing automation, reproducibility, structure, and flow to your data engineering projects.</p>
 
 </div>
 </div>
@@ -48,7 +48,7 @@ nb_path: "nbs/index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>PyPipe was made by <a href="https://www.robtheoceanographer.com/">Robert Johnson</a> and <a href="https://alexkozlov.com/">Alexander Kozlov</a> and <a href="https://www.linkedin.com/in/mohammadreza-khanarmuei-437a3163">Mohammadreza Khanarmuei</a></p>
+<p>PyDuct was made by <a href="https://www.robtheoceanographer.com/">Robert Johnson</a> and <a href="https://alexkozlov.com/">Alexander Kozlov</a> and <a href="https://www.linkedin.com/in/mohammadreza-khanarmuei-437a3163">Mohammadreza Khanarmuei</a></p>
 
 </div>
 </div>
@@ -68,14 +68,14 @@ nb_path: "nbs/index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The PyPipe transformation pipelines use user defined transformation functions linked together into a TransformationPipe. The key feature of PyPipe is that the datasource passed in can be almost anything that you desire  - e.g. a pandas dataframe, a geopandas dataframe, and iris datacube, a numppy array, so long as your transformation steps read and write the same object pypipe will work for you.</p>
+<p>The PyDuct transformation pipelines use user defined transformation functions linked together into a TransformationPipe. The key feature of PyDuct is that the datasource passed in can be almost anything that you desire  - e.g. a pandas dataframe, a geopandas dataframe, and iris datacube, a numppy array, so long as your transformation steps read and write the same object PyDuct will work for you.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/pypipe/images/pypipe.jpeg" alt="pypipe arch"></p>
+<p><img src="/pyduct/images/pypipe.jpeg" alt="pypipe arch"></p>
 
 </div>
 </div>
@@ -88,7 +88,7 @@ nb_path: "nbs/index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>pip install pypipe</code></p>
+<p><code>pip install pyduct</code></p>
 
 </div>
 </div>
@@ -108,7 +108,7 @@ nb_path: "nbs/index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In order to use PyPipe you need two things - a DataObject and a set of transformation steps</p>
+<p>In order to use PyDuct you need two things - a DataObject and a set of transformation steps</p>
 
 </div>
 </div>
@@ -352,7 +352,7 @@ nb_path: "nbs/index.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Define-a-PyPipe">Define a PyPipe<a class="anchor-link" href="#Define-a-PyPipe"> </a></h3><p>Now that we have a step or function and some data we can now define our transformation pipeline:</p>
+<h3 id="Define-a-PyDuct-Pipe">Define a PyDuct Pipe<a class="anchor-link" href="#Define-a-PyDuct-Pipe"> </a></h3><p>Now that we have a step or function and some data we can now define our transformation pipeline:</p>
 
 </div>
 </div>
@@ -378,7 +378,7 @@ nb_path: "nbs/index.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Evaluate-your-PyPipe">Evaluate your PyPipe<a class="anchor-link" href="#Evaluate-your-PyPipe"> </a></h3><p>This where things get interesting... we can now call <code>evaluate</code> on our pipe and watch the magic happen:</p>
+<h3 id="Evaluate-your-PyDuct-Pipe">Evaluate your PyDuct Pipe<a class="anchor-link" href="#Evaluate-your-PyDuct-Pipe"> </a></h3><p>This where things get interesting... we can now call <code>evaluate</code> on our pipe and watch the magic happen:</p>
 
 </div>
 </div>
