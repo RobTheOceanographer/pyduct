@@ -2,9 +2,19 @@
 > A framework for building and running simple data engineering pipelines in Python.
 
 
+In Data Science or Data Engineering you constantly hear term “data pipeline”. But there are so many meanings to this term and people often are refering to very specific tools or packages depending on their own background/needs. There are pipelines for pretty much everything and in Python alone I can think of [Luigi](https://luigi.readthedocs.io/en/stable/), [Airflow](https://airflow.apache.org/), [scikit-learn pipelines](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html), and [Pandas pipes](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pipe.html) just off the top of my head - [this article](https://towardsdatascience.com/data-pipelines-what-why-and-which-ones-1f674ba49946) does a good job of helping you understand what is out there.
+
+It can be quite confusing especially if you want a simple and agnostic pipeline that you can customize for your specific needs with no bells and whistles or lock-ins to libraries etc. That is where PyPipe comes in. It is for the simple data engineer who just wants to get stuff done in an ordered and repeatable way.
+
+PyPipe is a simple data pipeline that automates a chain of transformations performed on some data.
+
+PyPipe data pipelines are a great way of introducing automation, reproducibility, structure, and flow to your data engineering projects.
+
 ---
 
 PyPipe was made by [Robert Johnson](https://www.robtheoceanographer.com/) and [Alexander Kozlov](https://alexkozlov.com/) and [Mohammadreza Khanarmuei](https://www.linkedin.com/in/mohammadreza-khanarmuei-437a3163)
+
+---
 
 ## What is it?
 
