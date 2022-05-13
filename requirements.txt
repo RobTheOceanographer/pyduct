@@ -1,0 +1,11 @@
+autopep8
+fastcore
+geopandas
+Jinja2
+matplotlib
+nbdev
+numpy
+pandas
+pygeos
+pyproj
+Shapely

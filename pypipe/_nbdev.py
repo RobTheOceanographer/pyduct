@@ -2,9 +2,9 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"TransformationPipe": "00_pipes.ipynb"}
 
-modules = []
+modules = ["pipes.py"]
 
 doc_url = "https://robtheoceanographer.github.io/pypipe/"
 
